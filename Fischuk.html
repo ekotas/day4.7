@@ -1,14 +1,15 @@
 <html>
 <head>
 </head>
-<body>
-<p>Введите функцию<input type="text" size="20" id="asd" value="x*x-9"></p>
-<p>Введите xmax<input type="text" size="20" id="xmax" value="250"></p>
-<p>Введите xmin<input type="text" size="20" id="xmin" value="-250"></p>
-<p>Введите ymax<input type="text" size="20" id="ymax" value="250"></p>
-<p>Введите ymin<input type="text" size="20" id="ymin" value="-250"></p>
-<p>Введите ширину<input type="text" size="20" id="width" value="500"></p>
-<p>Введите высоту<input type="text" size="20" id="height" value="500"></p>
+<body onload="Func();">
+<p>введите функцию<input type="text" size="20" id="asd" value="sin(x)*10"></p>
+<p>введите xmax<input type="text" size="20" id="xmax" value="250"></p>
+<p>введите xmin<input type="text" size="20" id="xmin" value="-250"></p>
+<p>введите ymax<input type="text" size="20" id="ymax" value="250"></p>
+<p>введите ymin<input type="text" size="20" id="ymin" value="-250"></p>
+<p>введите ширину<input type="text" size="20" id="width" value="500"></p>
+<p>введите высоту<input type="text" size="20" id="height" value="500"></p>
+<p>введите точность<input type="text" size="20" id="dx" value="-6"></p>
 <p><button onclick="Func();">CLICK</button></p>
 <canvas id="canvas"></canvas>
 <script src="script.js">
