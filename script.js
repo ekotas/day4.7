@@ -60,12 +60,12 @@ class  Graphics1d
             //console.log(border3-border1);
             let fdx=1e-20;
             let k=0;
-            while(border3-border1>fdx)
+            while(border3-border1>2*fdx)
             {
                 let ff=this.f;
                 let extr=getExtra(border1,border2,border3,ff);
                 k++;
-                if(extr!=0 || k>1000){
+                if(extr!=0 && k<500){
                 if(extr<border1 || extr>border3)
                 {
                     l=1;
@@ -86,6 +86,7 @@ class  Graphics1d
                     break;
                 }
             }
+            if(extra>=i-step && i<= i+step)
             this.extremums.push(this.f(extra));
         }
     }
@@ -100,8 +101,7 @@ class  Graphics1d
     {
         for(let i=0;i<this.extremums.length;i++)
         {
-            if(this.extremums[i]!=0)
-                    console.log(this.extremums[i]);
+           console.log(this.extremums[i]);
         }
     }
 }
